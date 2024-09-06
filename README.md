@@ -36,7 +36,7 @@ A web-based application to monitor and manage employee workloads. The applicatio
     ```
 
 2. **Access the web interface**:
-    Open a web browser and navigate to `http://localhost:8000`.
+    The web browser window should open automatically.
 
 ## License
 This project is licensed under the MIT License.
