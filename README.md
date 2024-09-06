@@ -1,7 +1,7 @@
 # Employee Workload Monitor
 
 ## Description
-A web-based application to monitor and manage employee workloads. The application is designed for a context where all users have access to the data file/database, and it should be secure. To ensure security, the application uses a combination of symmetric and asymmetric encryption. A privileged user (employer) has access to all data, which is why both types of encryption are used. The backend is a Python application that uses Eel to temporarily host a web frontend.
+A web-based application to monitor and manage employee workloads. The application is designed for a context where all users have access to the data file/database (used like a shared excel workbook on a network drive), and it should be secure. To ensure security, the application uses a combination of symmetric and asymmetric encryption. A privileged user (employer) has access to all data, which is why both types of encryption are used. The backend is a Python application that uses Eel to temporarily host a web frontend.
 
 ## Installation
 
