@@ -42,6 +42,22 @@
     </div>
     <div id="employer-dashboard" style="display:none;">
         <h1>Employer Dashboard</h1>
+        <div id="filters">
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by" onchange="updateWorkloadList()">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="workload-asc">Workload (Low-High)</option>
+                <option value="workload-desc">Workload (High-Low)</option>
+            </select>
+            <label for="filter-range">Filter by workload range:</label>
+            <select id="filter-range" onchange="updateWorkloadList()">
+                <option value="all">All</option>
+                <option value="-1--0">-1 to 0</option>
+                <option value="0--1">0 to 1</option>
+                <option value="1--2">1 to 2</option>
+            </select>
+        </div>
         <div id="workloads"></div>
         <button onclick="logout()">Logout</button>
     </div>

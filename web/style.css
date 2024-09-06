@@ -51,6 +51,11 @@ button {
     cursor: pointer;
 }
 
+#dashboard button, #employer-dashboard button {
+    margin: 10px;
+    min-width: 80px;
+}
+
 button:hover {
     background-color: #0056b3;
 }
@@ -107,10 +112,40 @@ hr {
     cursor: pointer;
 }
 
-#workloads {
-    white-space: pre-wrap;
-    text-align: left;
+#filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 600px;
-    margin-top: 20px;
+}
+
+#filters label {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+#filters select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#workloads {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#workloads li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+#workloads li:nth-child(even) {
+    background: #f9f9f9;
 }
