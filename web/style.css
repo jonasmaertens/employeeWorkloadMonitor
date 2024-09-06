@@ -88,10 +88,12 @@ hr {
 
 #dashboard input[type="range"] {
     -webkit-appearance: none;
-    height: 2em;
+    height: 1em;
     width: 300px;
     border-radius: 20px;
-    background: linear-gradient(90deg, rgba(0, 234, 255, 1) 0%, rgba(8, 209, 6, 1) 33%, rgba(255, 0, 0, 1) 100%);
+    margin: 15px;
+    background: linear-gradient(90deg, rgb(6 0 255) 0%, rgb(3 255 0) 33%, rgb(255 0 0) 100%);
+    filter: grayscale(0.5);
 }
 
 #dashboard input[type="range"]::-webkit-slider-thumb {
@@ -99,17 +101,22 @@ hr {
     appearance: none;
     width: 2em;
     height: 2em;
-    background: #04AA6D;
+    background: #00000000;
     border-radius: 50%;
     cursor: pointer;
+    backdrop-filter: saturate(5) brightness(5);
+    border: 2px solid black;
 }
 
 #dashboard input[type="range"]::-moz-range-thumb {
+    appearance: none;
     width: 2em;
     height: 2em;
+    background: #00000000;
     border-radius: 50%;
-    background: #04AA6D;
     cursor: pointer;
+    backdrop-filter: saturate(5) brightness(5);
+    border: 2px solid black;
 }
 
 #filters {

@@ -66,10 +66,10 @@ async function showUserDashboard(username, workload) {
     const current_workload = workload;
     document.getElementById('current_workload').innerText = current_workload;
     document.getElementById('workload').value = current_workload;
-    document.getElementById('wl_label').innerText = `Current workload: ${current_workload}`;
+    document.getElementById('wl_label').innerText = `Updated workload: ${current_workload}`;
     // add event listener to slider
     document.getElementById('workload').addEventListener('input', function () {
-        document.getElementById('wl_label').innerText = `Current workload: ${this.value}`;
+        document.getElementById('wl_label').innerText = `Updated workload: ${this.value}`;
     });
 }
 

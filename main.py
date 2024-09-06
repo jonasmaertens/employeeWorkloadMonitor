@@ -111,7 +111,7 @@ def signup(username, password):
         "workload": encrypted_workload
     }
     save_data(data)
-    return "Signup successful"
+    return "Signup successful. Please log in."
 
 
 @eel.expose
