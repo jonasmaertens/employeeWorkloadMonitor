@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Workload</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Employee Workload Management</h1>
+    <div id="form-container">
+        <form id="login-form" onsubmit="login(event)">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <form id="signup-form" onsubmit="signup(event)" style="display:none;">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="username" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="toggle-form">
+            Not registered? <a href="#" onclick="showSignupForm()">Sign up</a>
+        </p>
+        <hr>
+        <p>Authorized to view monitor? Enter password here:</p>
+        <form id="employer-form" onsubmit="viewAllWorkloads(event)">
+            <label for="employer-password">Password:</label>
+            <input type="password" id="employer-password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="dashboard" style="display:none;">
+        <p>Welcome, <span id="username"></span></p>
+        <p>Your current workload: <span id="current_workload"></span></p>
+        <label for="workload" id="wl_label">Workload:</label>
+        <input type="range" id="workload" name="workload" min="-1" max="2" step="0.5">
+        <button onclick="updateWorkload()">Update Workload</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <div id="employer-dashboard" style="display:none;">
+        <h1>Employer Dashboard</h1>
+        <div id="workloads"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
