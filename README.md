@@ -19,7 +19,7 @@ A web-based application to monitor and manage employee workloads. The applicatio
 
 3. **Install dependencies**:
     ```sh
-    pip install -r requirements.txt
+    pip install eel
     ```
 
 4. **Generate RSA key pair**:

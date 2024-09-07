@@ -32,14 +32,12 @@ def generate_key(password, salt):
     kdf = Scrypt(salt=salt, length=32, n=2 ** 14, r=8, p=1, backend=default_backend())
     return kdf.derive(password.encode())
 
-
 def encrypt_data(data, key):
     iv = os.urandom(16)
     cipher = Cipher(algorithms.AES(key), modes.CFB(iv), backend=default_backend())
     encryptor = cipher.encryptor()
     encrypted_data = encryptor.update(data.encode()) + encryptor.finalize()
     return base64.b64encode(iv + encrypted_data).decode()
-
 
 def decrypt_data(encrypted_data, key):
     encrypted_data = base64.b64decode(encrypted_data)
